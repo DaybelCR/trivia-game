@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Trivia.com</title>
+    <link rel="shortcut icon" href="web.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+    <!--ventana1 - Inicio-->
+    <div id="ventana-inicio" class="ventana">
+      <i class="fas fa-house-user fa-5x" style="color: #3C33FF ;"></i>
+      <h1>Bienvenid@ a TRIVIA MUSICAL <i class="fas fa-music"></i></h1>
+     
+      <label for="name">Escriba su nombre :</label>
+      <input type="text" id="name" placeholder="Ingresa...">
+      <button id="Comenzar">Comenzar</button>
+      
+    </div>
+
+    <!--ventana2 - Opcion Tema-->
+    <div id="Opcion-tema" class="ventana">
+      <p>Hola <span id="nombre"></span>!!! </p>
+      <i class="far fa-smile-beam fa-3x" style="color: #FFE033 ;"></i>
+      <label >Escoja una opción /Temas:</label>
+      <button id="Musica-clasico">Género clásico</button>
+      <button id="Musica-electro">Género electro</button>
+    </div>
+    
+    <!--ventana3 - Genero Clasico-->
+    <div id="GeneroClasico" class="ventana">
+      <h2>Género Clásico</h2>
+        <p>1.¿Quién compuso la música del ballet "El lago de los  cisnes"</p>
+        
+        <label for="Ilich"><input type="radio" id="Ilich" name="clasica" value="Ilich">Piotr Ilich Chaikovski</label><!-- correcta -->
+        <label for="Chopin"> <input type="radio"  id="Chopin" name="clasica" value="Chopin">Fréderic Chopin</label>
+        <label for="Brahms"><input type="radio"  id="Brahms" name="clasica" value="Brahms">Johannes Brahms</label>
+  
+        <p>2.¿Cuál de estos músicos compuso solo una ópera?</p>
+        
+        <label for="Verdi"><input type="radio" id="Verdi" name="clasica2" value="Verdi">Giuseppe Verdi </label>
+        <label for="Puccini"><input type="radio" id="Puccini" name="clasica2" value="Puccini">Giacomo Puccini</label>
+        <label for="Beethoven"><input type="radio"  id="Beethoven" name="clasica2" value="Beethoven">Ludwig van Beethoven</label> <!-- correcta -->
+        
+        <p>3.¿Para qué instrumento principal compuso Vivaldi "Las cuatro estaciones"?</p>
+
+        <label for="Violin"><input type="radio" id="Violin" name="clasica3" value="Violin">Violín </label><!-- correcta -->
+        <label for="Piano"> <input type="radio" id="Piano" name="clasica3" value="Piano">Piano</label>
+        <label for="Flauta"><input type="radio"  id="Flauta" name="clasica3" value="Flauta">Flauta</label>
+         
+        <!-- <button id="responder-ver-resultados">Responder y Ver resultados </button> -->
+         <button id="responder">Responder</button>
+    </div>
+
+    <!--ventana4 - Genero electro-->
+    <div id="GeneroElectro" class="ventana">
+      <h2>Género Electro</h2>
+        <p>1.En su origen era música reservada solo para...</p>
+        
+        <label for="cultos"><input type="radio" id="cultos" name="electro" value="cultos">Los más cultos</label><!-- correcta -->
+        <label for="bajas"> <input type="radio"  id="bajas" name="electro" value="bajas">Las clases sociales más bajas</label>
+        <label for="mundo"><input type="radio"  id="mundo" name="electro" value="mundo">Todo el mundo</label>
+
+        <p>2.La música electrónica nace...</p>
+        
+        <label for="principio"><input type="radio" id="principio" name="electro2" value="principio">A principios del siglo XIX</label>
+        <label for="medio"><input type="radio" id="medio" name="electro2" value="medio">En los años 90 del siglo XIX</label>
+        <label for="final"><input type="radio"  id="final" name="electro2" value="final">En los años 70 del siglo XX</label> <!-- correcta -->
+         
+        <p>3.La música electrónica destaca por incluir</p>
+
+        <label for="naturaleza"><input type="radio" id="naturaleza" name="electro3" value="naturaleza">Sonidos de la naturaleza</label>
+        <label for="humana"> <input type="radio" id="humana" name="electro3" value="humana">Sonidos creados por la voz humana</label>
+        <label for="ordenadores"><input type="radio"  id="ordenadores" name="electro3" value="ordenadores">Sonidos creados por ordenadores y similiares</label><!-- correcta -->
+         
+        <button id="responder2">Responder</button>
+         
+    </div>
+
+    <!--ventana5 - Respuestas-->
+    <div id="Opcion-respuestas" class="ventana">
+      <p id="title">Aquí están tus resultados !!!<i class="fas fa-file-signature"></i> </p>
+      <div class='rpta'>
+      <p id="rpta1"></p>
+      <p id="rpta2"></p>
+      <p id="rpta3"></p>
+      <p id="puntaje"></p>
+      </div>
+      <button id="volver-jugar">Volver a jugar</button>
+      <button id="nuevo-jugador">Volver al inicio</button>
+    </div>
+  
+    <script src="app.js"></script>
+
+  </body>
+
+</html>
